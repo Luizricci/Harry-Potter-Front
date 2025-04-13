@@ -23,7 +23,7 @@
 .avatar{
     border-radius: 10px;
     object-fit: cover;
-    width: 125px; /* Largura fixa */
+    width: 125px; 
     height: 125px;
     margin-bottom: 8px;
 }
