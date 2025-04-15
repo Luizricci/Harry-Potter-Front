@@ -23,9 +23,11 @@ export default function Home() {
 
     return (
         <div className="container">
+            <div className="grid">
                             {wizards.map((char) =>(
                     <Card key={char.id} wizard={char}/>
                 ))}
+            </div>
         </div>
     )
 }
