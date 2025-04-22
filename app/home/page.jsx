@@ -1,5 +1,7 @@
 "use client"
 
+require("dotenv").config();
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./home.css";
@@ -11,7 +13,11 @@ export default function Home() {
 
     useEffect(() => {
         axios
-            .get('http://localhost:3000/api/wizards')
+            .get('http://localhost:3030/api/wizards',{
+                headers: {
+                    "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+                }
+            })
             .then((response) => {
                 setwizards(response.data)
             })
